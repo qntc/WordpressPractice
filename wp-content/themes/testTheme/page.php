@@ -3,18 +3,16 @@
 get_header();
 
 while(have_posts()){
-  the_post(); ?>
+  the_post();
+  pageBanner(array(
+    'title' => 'title nay',
+    'subtitle' => 'world going on',
+    'photo' => 'https://img00.deviantart.net/9480/i/2011/046/4/a/random_banner_by_mobianangel11-d39nc1t.png'
+  ));
+  ?>
 
 
-  <div class="page-banner">
-    <div class="page-banner__bg-image" style="background-image: url(<?php echo get_theme_file_uri('images/ocean.jpg') ?>);"></div>
-    <div class="page-banner__content container container--narrow">
-      <h1 class="page-banner__title"><?php the_title();?></h1>
-      <div class="page-banner__intro">
-        <p>Learn how the school of your dreams got started.</p>
-      </div>
-    </div>
-  </div>
+
 
   <div class="container container--narrow page-section">
 
