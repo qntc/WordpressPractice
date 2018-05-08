@@ -18,7 +18,7 @@
         <nav class="main-navigation">
         <ul>
             <li <?php if (is_page('approach') or wp_get_post_parent_id( 0 ) == 60) echo 'class="current-menu-item"'?>><a href="<?php echo site_url('/approach');?>">About Us</a></li>
-            <li <?php if (get_post_type() == 'program') echo 'class="current-menu-item"'?>><a href="<?php echo get_post_type_archive_link( 'program' ); ?>">Programs</a></li>
+            <li <?php if (get_post_type() == 'program') echo 'class="current-menu-item"'?>><a href="<?php echo get_post_type_archive_link( 'program' ); ?>">Courses</a></li>
             <li <?php if (get_post_type() == 'event' or is_page('past-events')) echo 'class="current-menu-item"'?>><a href="<?php echo get_post_type_archive_link( 'event' ); ?>">Events</a></li>
             <li <?php if (get_post_type() == 'campus') echo 'class="current-menu-item"' ?> ><a href="<?php echo get_post_type_archive_link( 'campus' ) ?>">Campuses</a></li>
             <li><a href="<?php echo get_post_type_archive_link( 'post' ); ?>">Blog</a></li>
