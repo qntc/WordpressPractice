@@ -53,7 +53,20 @@ while(have_posts()){
   <?php } ?>
 
     <div class="generic-content">
-      <?php the_content(); ?>
+      <?php the_content();
+
+      $skyLord = sanitize_text_field(get_query_var('skyLord'));
+      $groundLord = sanitize_text_field(get_query_var('groundLord'));
+
+       if($skyLord == 'me' and $groundLord == 'you'){
+         echo '<h1>WHY NO SEE ME</h1>';
+       }
+      ?>
+      <form method="get">
+        <input name='skyLord' placeholder="sky lord"/>
+        <input name='groundLord' placeholder="ground lord"/>
+        <button>Submit</button>
+      </form>
       </div>
 
   </div>

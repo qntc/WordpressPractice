@@ -125,5 +125,24 @@ function university_post_types(){
     'menu_icon' => 'dashicons-heart'
   ) );
 
+
+    //carousel post type
+
+    register_post_type( 'carousel', array(
+      'supports' => array(
+        'title', 'excerpt', 'thumbnail'
+      ),
+      'public' => false,
+      'show_ui' => true,
+      'labels' => array(
+        'name' => 'Carousel',
+        'add_new_item' => 'Add New Carousel',
+        'edit_item' => 'Edit Carousel',
+        'all_items' => 'All Carousel',
+        'singular_name'=> 'Carousel'
+      ),
+      'menu_icon' => 'dashicons-format-gallery'
+    ) );
+
 }
 add_action( 'init', 'university_post_types');

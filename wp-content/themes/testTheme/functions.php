@@ -1,5 +1,13 @@
 <?php
 
+function universityQueryVars($vars){
+  $vars[]='skyLord';
+    $vars[]='groundLord';
+  return $vars;
+}
+
+add_filter('query_vars', 'universityQueryVars');
+
 require get_theme_file_path('/inc/search_route.php');
 require get_theme_file_path('/inc/like-route.php');
 
@@ -11,7 +19,6 @@ function university_custom_rest(){
   register_rest_field('note','userNoteount', array(
     'get_callback' => function(){return count_user_posts(get_current_user_id(),'note');}
   ));
-
 }
 
 add_action( 'rest_api_init', 'university_custom_rest');
